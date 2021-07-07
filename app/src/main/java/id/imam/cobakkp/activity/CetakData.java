@@ -1,7 +1,9 @@
 package id.imam.cobakkp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 import androidx.core.widget.NestedScrollView;
+import id.imam.cobakkp.BuildConfig;
 import id.imam.cobakkp.R;
 
 import android.Manifest;
@@ -34,6 +36,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.Objects;
 
 public class CetakData extends AppCompatActivity {
 private TextView Namawisata,Hargawisata,Keterangan,Kodetransaksi,Tempatwisata,Keteranganwisata,Tanggalberangkat,Namapemesan,Tanggalberhasil,NamaAdmin;
@@ -68,7 +71,7 @@ private Button btncetak;
 
         WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
         mDisplay = wm.getDefaultDisplay();
-
+/**
         if(Build.VERSION.SDK_INT>=24){
             try{
                 Method m = StrictMode.class.getMethod("disableDeathOnFileUriExposure");
@@ -77,7 +80,7 @@ private Button btncetak;
                 e.printStackTrace();
             }
         }
-
+*/
         if(Build.VERSION.SDK_INT >= 23){
             if(checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
                     && checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -216,21 +219,38 @@ private Button btncetak;
 
 
 }
+//------------------------------------------------------------------------------------------------------------
+    public File getFile(Context context, String fileName) {
+        if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+            return null;
+        }
+
+        File storageDir = context.getExternalFilesDir(null);
+        return new File(storageDir, fileName);
+    }
+
+    public Uri getFileUri(Context context, String fileName) {
+        File file = getFile(context, fileName);
+        return FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".provider", file);
+    }
 
     private void openPdf(String path) {
 
-        File file = new File(path);
-        Intent target = new Intent(Intent.ACTION_VIEW);
-        target.setDataAndType(Uri.fromFile(file), "application/pdf");
-        target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        Uri uri  = getFileUri(this,path);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(uri, "application/pdf");
 
-        Intent intent = Intent.createChooser(target, "Open FIle");
-        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        try{
+        // FLAG_GRANT_READ_URI_PERMISSION is needed on API 24+ so the activity opening the file can read it
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+        if (intent.resolveActivity(getPackageManager()) == null) {
+            // Show an error
+        } else {
             startActivity(intent);
-        }catch (ActivityNotFoundException e){
-            Toast.makeText(this, "No Apps to read PDF FIle", Toast.LENGTH_SHORT).show();
         }
+
+//................................................................................................................
+
+
     }
 }
