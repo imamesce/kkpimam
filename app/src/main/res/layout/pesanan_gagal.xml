@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textpesannamagagal"
+            android:fontFamily="@font/bold_big"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@drawable/ic_namaorder"
+            android:drawablePadding="10dp"
+            android:text="namawisata"
+            android:textColor="#B6B0B1"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/keterangan1gagal" />
+
+        <TextView
+            android:textStyle="italic"
+            android:textColor="#B6B0B1"
+
+            android:id="@+id/idwaktugagal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+            android:drawablePadding="10dp"
+            android:text="dibatalkan admin"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderketeranganwisatagagal" />
+
+        <TextView
+            android:textColor="#B6B0B1"
+            android:fontFamily="@font/bold_big"
+            android:id="@+id/orderketeranganwisatagagal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="7dp"
+            android:text="Paket Wisata yy bali selama 1 hari,sudah termasuk kendaraan,makan,dan penginapan...Untuk request lain nya/pertanyaan.. silahkan hubungi admin"
+            app:layout_constraintBottom_toTopOf="@+id/idwaktugagal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.441"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textpesannamagagal" />
+
+        <TextView
+
+            android:id="@+id/keterangan1gagal"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="44dp"
+
+            android:drawableLeft="@drawable/ic_namaorder"
+            android:drawablePadding="10dp"
+            android:text="MenungguhiPembayaran"
+            android:textColor="#B6B0B1"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textColor="#B6B0B1"
+            android:id="@+id/textView9gagal"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="25dp"
+            android:text="123456789"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/textpesannamagagal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:drawableLeft="@drawable/ic_baseline_notifications_active_24"
+            android:text="Rp."
+            app:layout_constraintBottom_toBottomOf="@+id/textView9gagal"
+            app:layout_constraintEnd_toStartOf="@+id/textView9gagal"
+            app:layout_constraintTop_toTopOf="@+id/textView9gagal" />
+
+        <TextView
+            android:id="@+id/textView13"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:text="Transaksi Di batalkan"
+            android:textColor="@color/design_default_color_error"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idwaktugagal"
+            tools:layout_editor_absoluteX="118dp" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="kode transaksi"
+            android:textColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="@+id/keterangan1gagal"
+            app:layout_constraintHorizontal_bias="0.459"
+            app:layout_constraintStart_toStartOf="@+id/keterangan1gagal"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

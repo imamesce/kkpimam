@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradientregister"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView47"
+        tools:ignore="MissingConstraints">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:cardCornerRadius="40dp"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/teleponregister"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="@color/design_default_color_on_secondary"
+
+
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="73dp"
+                    android:background="@drawable/gradientnamaa"
+                    android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+                    android:drawablePadding="20dp"
+                    android:ems="10"
+                    android:hint="telepon"
+                    android:inputType="phone"
+                    android:paddingLeft="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/passwordregister" />
+
+                <EditText
+
+                    android:id="@+id/passwordregister"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+
+                    android:background="@drawable/gradientnamaa"
+                    android:drawableLeft="@drawable/ic_round_lock_24"
+                    android:drawablePadding="20dp"
+                    android:ems="10"
+                    android:hint="masukan password anda"
+                    android:inputType="textPassword"
+                    android:paddingLeft="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/emailregister" />
+
+                <EditText
+                    android:background="@drawable/gradientnamaa"
+
+                    android:id="@+id/emailregister"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_marginEnd="20dp"
+                    android:drawableLeft="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="20dp"
+                    android:ems="10"
+                    android:hint="email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/namaregister" />
+
+                <EditText
+                    android:id="@+id/namaregister"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="67dp"
+
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/gradientnamaa"
+                    android:drawableLeft="@drawable/ic_baseline_how_to_reg_24"
+                    android:drawablePadding="20dp"
+                    android:ems="10"
+                    android:hint="username"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/design_default_color_on_secondary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_register"
+
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttondaftar"
+        android:fontFamily="@font/bold_big"
+        android:text="Daftar"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+    <TextView
+        android:id="@+id/textview_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="47dp"
+        android:fontFamily="@font/bold_big"
+        android:gravity="center"
+        android:text="Sudah punya akun ? Klik disini"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_register" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:fontFamily="@font/bold_big"
+        android:gravity="center"
+        android:text="Silahkan Daftar"
+        android:textColor="#ffff"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/btm_home"
+        android:title="Home"
+
+        android:icon="@drawable/homee"/>
+    <item
+
+        android:id="@+id/btm_pesann"
+        android:title="Pesanan Berhasil"
+
+        android:icon="@drawable/ic_baseline_notifications_active_24"/>
+    <item
+        android:id="@+id/btm_pengaturan"
+        android:title="Hubungi Kami"
+
+        android:icon="@drawable/ic_baseline_local_phone_24"/>
+
+
+
+
+</menu>

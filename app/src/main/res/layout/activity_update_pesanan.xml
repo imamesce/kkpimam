@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.UpdatePesanan">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative_layout_progress_order"
+        android:background="@android:color/primary_text_dark"
+        android:alpha="0.7"
+        android:clickable="true"
+        android:visibility="gone">
+        <ProgressBar
+            android:indeterminateTint="@color/ic_launcher_background"
+            android:id="@+id/progressbarorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="@color/design_default_color_error"
+                android:id="@+id/namaupdatepesanan"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="right"
+                android:text="mm"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:textColor="@color/design_default_color_error"
+                android:textStyle="bold"
+
+                android:id="@+id/jj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="72dp"
+                android:gravity="center"
+                android:text="id transaksi"
+                app:layout_constraintBottom_toBottomOf="@+id/namaupdatepesanan"
+                app:layout_constraintEnd_toStartOf="@+id/namaupdatepesanan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        tools:layout_editor_absoluteX="7dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textpesannama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@drawable/ic_namaorder"
+                android:drawablePadding="10dp"
+                android:text="namawisata"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/keterangan1" />
+
+            <TextView
+                android:id="@+id/idwaktu"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                android:drawablePadding="10dp"
+                android:text="desember-22-2222 jam 03.03.03 wib"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/orderketeranganwisata" />
+
+            <TextView
+                android:id="@+id/orderketeranganwisata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="22dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="7dp"
+                android:text="Paket Wisata yy bali selama 1 hari,sudah termasuk kendaraan,makan,dan penginapan...Untuk request lain nya/pertanyaan.. silahkan hubungi admin"
+                app:layout_constraintBottom_toTopOf="@+id/idwaktu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.441"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textpesannama" />
+
+            <TextView
+                android:id="@+id/keterangan1"
+                android:layout_width="200dp"
+
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+
+                android:layout_marginTop="17dp"
+                android:drawableLeft="@drawable/ic_namaorder"
+                android:drawablePadding="10dp"
+                android:text="MenungguhiPembayaran"
+                android:textColor="@color/design_default_color_error"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:textColor="@color/design_default_color_error"
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="25dp"
+                android:text="123456789"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textpesannama"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="45dp"
+                android:layout_height="20dp"
+                android:drawableLeft="@drawable/ic_baseline_notifications_active_24"
+                android:text="Rp."
+                app:layout_constraintBottom_toBottomOf="@+id/hargawisata"
+                app:layout_constraintEnd_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView13"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:text="Pastikan input data anda dengan benar"
+                android:textColor="@color/design_default_color_error"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idwaktu"
+                tools:layout_editor_absoluteX="118dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/inputnamaanda"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_editlogin"
+        android:drawableLeft="@drawable/ic_baseline_play_arrow_24"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="Masukan Nama Anda"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+    <EditText
+        android:id="@+id/inputnotelepon"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_editlogin"
+        android:drawableLeft="@drawable/ic_baseline_play_arrow_24"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="Masukan No tlp yang bisa dihubungi"
+        android:inputType="phone"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputnamaanda" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="131dp"
+        android:background="@drawable/bca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <ImageView
+        android:id="@+id/updateimagepesanan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_baseline_add_circle_outline_24"
+        app:layout_constraintBottom_toTopOf="@+id/butonupdatepesanan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <Button
+        android:background="#EC9FAD"
+        android:id="@+id/butonupdatepesanan"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/updateimagepesanan"
+        android:text="konfirmasi pesanan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="131dp"
+        android:text="Silahkan transfer ke rekening di bawah ini"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputnotelepon" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="No Rekening BCA : 123456789    A/N SUKASUKA"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView14"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:drawableRight="@drawable/ic_namaorder"
+        android:text="Upload struk"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/updateimagepesanan"
+        app:layout_constraintEnd_toStartOf="@+id/updateimagepesanan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/updateimagepesanan" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

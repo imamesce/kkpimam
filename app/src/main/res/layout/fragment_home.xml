@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:background="@color/cardview_light_background"
+      android:id="@+id/linearprofile"
+      android:layout_width="match_parent"
+
+      android:layout_height="140dp">
+
+
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:id="@+id/imageView3"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginBottom="8dp"
+          android:src="@drawable/ic_baseline_add_circle_outline_24"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.953"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.125" />
+
+      <TextView
+          android:id="@+id/textView5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:fontFamily="@font/bold_big"
+          android:text="Selamat Datang"
+          android:textColor="@color/colorPrimaryDark"
+          android:textSize="27sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.135" />
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/cardtransaksiberhasil"
+          android:layout_width="match_parent"
+          android:layout_height="30dp"
+          android:layout_margin="10dp"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="15dp"
+          android:layout_marginEnd="9dp"
+          app:cardCornerRadius="20dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+          <TextView
+              android:drawablePadding="10dp"
+              android:drawableLeft="@drawable/ic_baseline_notifications_active_24"
+              android:id="@+id/lihatpesanan"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:text="LIHAT PESANAN ANDA DISINI"
+              android:textColor="@color/design_default_color_error"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+
+
+      </androidx.cardview.widget.CardView>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@color/design_default_color_error"
+            android:text="Coming Soon"
+            android:textSize="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+<com.denzcoskun.imageslider.ImageSlider
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+
+    android:id="@+id/slider"
+    app:auto_cycle="true"
+    app:delay="0"
+    app:placeholder="@color/cardview_light_background"
+    app:corner_radius="20"
+    app:error_image="@color/cardview_light_background"
+
+    android:layout_width="match_parent"
+    android:layout_height="200dp"/>
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@color/design_default_color_error"
+            android:text="Open trip"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerfragmenthome"
+            tools:listitem="@layout/card_kategori_jawa_barat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
