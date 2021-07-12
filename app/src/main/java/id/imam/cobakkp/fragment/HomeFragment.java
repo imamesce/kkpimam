@@ -14,8 +14,7 @@ import id.imam.cobakkp.activity.DetailActivity;
 import id.imam.cobakkp.activity.PesananAnda;
 import id.imam.cobakkp.activity.ProfileActivity;
 import id.imam.cobakkp.R;
-import id.imam.cobakkp.adapter.AdapterPesanan;
-import id.imam.cobakkp.adapter.Adapterwisata;
+
 import id.imam.cobakkp.apiclient.ApiInterface;
 import id.imam.cobakkp.apiclient.RetrofitInstance;
 import id.imam.cobakkp.model.ModelPesan;

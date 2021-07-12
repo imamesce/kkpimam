@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView belumpunyaakunn,lupapassword;
    private FirebaseAuth.AuthStateListener mAuthlistener;
    private ProgressBar progressBar;
-   private RelativeLayout relativeLayout;
+    RelativeLayout relativeLayout;
    private ConstraintLayout roottlayout;
 
 

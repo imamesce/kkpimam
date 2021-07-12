@@ -15,9 +15,7 @@ import id.imam.cobakkp.PesananBatal;
 import id.imam.cobakkp.R;
 import id.imam.cobakkp.activity.CetakData;
 import id.imam.cobakkp.activity.DetailActivity;
-import id.imam.cobakkp.adapter.AdapterBerhasil;
-import id.imam.cobakkp.adapter.AdapterPesanan;
-import id.imam.cobakkp.adapter.Adapterwisata;
+
 import id.imam.cobakkp.model.ModelBerhasil;
 import id.imam.cobakkp.model.ModelPesan;
 

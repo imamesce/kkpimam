@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import id.imam.cobakkp.R;
-import id.imam.cobakkp.adapter.AdapterGagal;
-import id.imam.cobakkp.adapter.Adapterwisata;
 import id.imam.cobakkp.model.ModelGagal;
 import id.imam.cobakkp.model.ModelWisatabaru;
 
